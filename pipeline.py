@@ -144,7 +144,6 @@ def test_clustalw_pipeline():
 
 
 def main():
-    os.chdir('/home/mnygard/final')
     accession_string = input("Please enter a list of accession numbers separated by commas:")
     accs = accession_string.split(', ')
     msa_string = input("Please select a tool for performing MSA [mafft] or [clustal]:")
@@ -201,6 +200,9 @@ def main():
         Phylo.draw(tree)
     else:
         print("Exiting...")
+
+if __name__ == "__main__":
+    main()
 
 
 project_accs = ['EU346911', 'GQ504012', 'AM940158', 'AB514037', 'FN597581',
