@@ -18,6 +18,9 @@ $ python pipeline
 Follow prompts. Note that RAxML functionality is currently not supported. Choosing RAxML for tree generation
 will cause a crash. 
 
+## Further Reading
+The paper associated with this application is available [here](https://github.com/mnygard/PhyloTreeApp/blob/master/Nygard_Paper.pdf)
+
 
 
 
