@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from Bio import Phylo, AlignIO
+from Bio import Phylo
 from requests.exceptions import InvalidURL
 from Bio.Align.Applications import MafftCommandline, ClustalwCommandline
 
 import os
-import sys
 from sys import stderr
 import fileinput
 import requests
@@ -31,7 +30,7 @@ def get_sequences(accessions, output_file):
                 f.write("\n".encode("UTF-8"))
 
         except InvalidURL as err:
-            print(err.message, file=stderr)
+            print(err.strerror, file=stderr)
             print("Accession " + str(a) + " not fetched!!")
 
     # replace parentheses from organism names with * for tree formatting
@@ -41,10 +40,12 @@ def get_sequences(accessions, output_file):
 
 
 def mafft_align(in_file, options={'align_file_type': 'fa'}):
-    mafft = "/home/mnygard/local/bin/mafft"
+    # mafft must be in your system PATH variable, or add the absolute path location of mafft binaries as the
+    # first argument to MafftCommandline()
+    # mafft = "/home/mnygard/local/bin/mafft"
 
     # create mafft command line script object
-    mafft_cline = MafftCommandline(mafft, input=in_file)
+    mafft_cline = MafftCommandline(input=in_file)
     if options['align_file_type'] == 'clustal':
         mafft_cline.clustalout = True
     out_file = "aligned." + options['align_file_type']
@@ -58,9 +59,11 @@ def mafft_align(in_file, options={'align_file_type': 'fa'}):
 
 
 def clustalw_align(in_file, options={'align_file_type': 'clustal'}):
-    cw2 = "/home/mnygard/local/bin/clustalw/clustalw2"
+    # clustalw must be in your system PATH variable, or add the absolute path location of clustalw binaries as the
+    # first argument to ClustalwCommandline()
+    # cw2 = "/home/mnygard/local/bin/clustalw/clustalw2"
 
-    clustalw_cline = ClustalwCommandline(cw2, infile=in_file)
+    clustalw_cline = ClustalwCommandline(infile=in_file)
     clustalw_cline.align = True
     clustalw_cline.output = options['align_file_type']
     clustalw_cline.outfile = 'clustal_aligned.aln'
@@ -128,7 +131,7 @@ def add_names_to_tree(combined_file, tree_file):
 
 def test_clustalw_pipeline():
     print("fetching sequences...")
-    get_sequences(accs, 'combined.fa')
+    get_sequences(project_accs, 'combined.fa')
 
     print("performing MSA...")
     clustalw_align('combined.fa', {'align_file_name': 'cw_aligned.aln', 'align_file_type': 'clustal'})
@@ -200,6 +203,7 @@ def main():
         Phylo.draw(tree)
     else:
         print("Exiting...")
+
 
 if __name__ == "__main__":
     main()
