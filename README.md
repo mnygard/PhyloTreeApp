@@ -13,7 +13,7 @@ Please make sure mafft, clustal and RAxML binaries are included in your system P
  
 ## Usage
 ```shell script
-$ python pipeline
+$ python createTree
 ```
 Follow prompts. Note that RAxML functionality is currently not supported. Choosing RAxML for tree generation
 will cause a crash. 
