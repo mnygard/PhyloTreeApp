@@ -5,8 +5,8 @@ phylogenetic tree beginning with raw data in the form of NCBI accession numbers.
 ## Dependencies
 * python 3.x
 * mafft
-* clustalw2
-* RAxML (Currently not supported)
+* clustalw2 (Currently not supported)
+* RAxML 
 * BioPython (pip install biopython)
 
 Please make sure mafft, clustal and RAxML binaries are included in your system PATH variable
@@ -15,11 +15,12 @@ Please make sure mafft, clustal and RAxML binaries are included in your system P
 ```shell script
 $ python createTree
 ```
-Follow prompts. Note that RAxML functionality is currently not supported. Choosing RAxML for tree generation
+Follow prompts. Note that clustal functionality is currently not supported. Choosing clustal for tree generation
 will cause a crash. 
 
 ## Further Reading
-The paper associated with this application is available [here](https://github.com/mnygard/PhyloTreeApp/blob/master/Nygard_Paper.pdf)
+The paper associated with this application is available
+[here](https://github.com/mnygard/PhyloTreeApp/blob/master/Nygard_Paper.pdf)
 
 
 
