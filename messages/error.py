@@ -1,0 +1,8 @@
+MafftErrorMessage = "Cannot find mafft! Make sure mafft binaries are in $PATH, or see createTree.py, line 40"
+raxmlErrorMessage = "Cannot find raxml! Make sure raxml binaries are in $PATH, or see createTree.py, line 93"
+NO_CLUSTAL = "Clustalw2 is currently not supported. Exiting ... "
+INVALID_SELECTION = "Invalid Selection! Exiting ... "
+UNKNOWN = "Unknown fatal error occurred. Exiting ... "
+CLEAN = "Cleaning up target directory..."
+INVALID_ALIGNER = "Invalid choice of tool for MSA! Please update the Tree object with a new tool."
+UNABLE_TO_LOAD_TREE = "Unable to load previously created tree! Please check the tree name."

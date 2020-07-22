@@ -1,0 +1,47 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+RAxML Bipartition Computation: Drawing support values from trees in file RAxML_bootstrap.T2 onto tree in file RAxML_bestTree.T1
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-SSE3 -f b -m GTRCAT -n nh -p 10000 -t RAxML_bestTree.T1 -T 3 -z RAxML_bootstrap.T2 
+
+
+
+
+Found 1 tree in File RAxML_bestTree.T1
+
+
+
+Found 10 trees in File RAxML_bootstrap.T2
+
+
+
+Found 1 tree in File RAxML_bestTree.T1
+
+
+
+Time for Computation of Bipartitions 0.005456
+Tree with bipartitions written to file:  /Users/marknygard/Pycharm/PhyloTreeApp/media/testTree/RAxML_bipartitions.nh
+Tree with bipartitions as branch labels written to file:  /Users/marknygard/Pycharm/PhyloTreeApp/media/testTree/RAxML_bipartitionsBranchLabels.nh
+Execution information file written to :  /Users/marknygard/Pycharm/PhyloTreeApp/media/testTree/RAxML_info.nh
