@@ -1,6 +1,9 @@
 # Persistance Files
 /media
 
+# GIT
+.gitignore
+
 # Editors
 .vscode/
 .idea/
