@@ -4,6 +4,9 @@
 # GIT
 .gitignore
 
+# development code
+clustal.py
+
 # Editors
 .vscode/
 .idea/
